@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jqExtendTest</title>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+	<style>
+	.test{
+		/*background: #000;*/
+	}
+	</style>
+</head>
+<body>
+	<div class="container" style="text-align: center;">
+		<ul class="pagination"></ul>
+	</div>
+	<h1 id="nowPage" style="text-align: center;"></h1>
+
+
+<script src="jquery.js"></script>
+<script src="loganJqPage.js"></script>
+<script>
+	var totalPage = 14;
+	var nowPage = 1;
+	$(".pagination").loganPages(totalPage, nowPage, function (nowPage) {
+		$("#nowPage").text(nowPage);
+	});
+</script>
+</body>
+</html>

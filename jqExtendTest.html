@@ -10,6 +10,18 @@
 		<ul class="pagination"></ul>
 	</div>
 	<h1 id="nowPage" style="text-align: center;"></h1>
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>name</th>
+				<th>address</th>
+			</tr>
+		</thead>
+		<tbody id="tableBody">
+			<tr></tr>
+		</tbody>
+	</table>
 <script src="jquery.js"></script>
 <script src="loganPage.js"></script>
 <script>
@@ -18,6 +30,7 @@
 		'totalPage' : 23
 	};
 	var clickCallback = function (nowPage, totalPage) {
+		$('#tableBody').find("tr").add('td');
 	};
 	$(".pagination").loganPages(opts, clickCallback);
 </script>
